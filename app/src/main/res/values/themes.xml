@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.DailyHabitTrackingAPP" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/monet_primary</item>
+        <item name="colorPrimaryVariant">@color/monet_primary</item>
+        <item name="colorOnPrimary">@color/monet_on_primary</item>
+        <item name="colorSecondary">@color/monet_green</item>
+        <item name="colorSecondaryVariant">@color/monet_green</item>
+        <item name="colorOnSecondary">@color/monet_on_primary</item>
+        <item name="android:colorBackground">@color/monet_surface</item>
+        <item name="colorSurface">@color/monet_surface</item>
+        <item name="android:statusBarColor">@color/monet_surface</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/monet_surface_lowest</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+</resources>

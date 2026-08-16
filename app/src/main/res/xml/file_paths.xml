@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- External storage: getExternalFilesDir() -->
+    <external-files-path
+        name="image_paths_ext"
+        path="Pictures"/>
+    <!-- Internal storage fallback: getFilesDir() -->
+    <files-path
+        name="image_paths_int"
+        path="."/>
+</paths>

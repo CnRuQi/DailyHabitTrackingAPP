@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">小日常</string>
+
+    <!-- Login -->
+    <string name="login_emoji">🌸</string>
+    <string name="login_title">每日习惯追踪</string>
+    <string name="login_subtitle">记录生活的美好</string>
+    <string name="hint_username">用户名</string>
+    <string name="hint_password">密码</string>
+    <string name="remember_me">记住我</string>
+    <string name="btn_login">登 录</string>
+    <string name="label_or">  或  </string>
+    <string name="btn_create_account">创建新账户</string>
+    <string name="toast_enter_username">请输入用户名</string>
+    <string name="toast_enter_password">请输入密码</string>
+    <string name="toast_wrong_credentials">用户名或密码错误</string>
+
+    <!-- Register -->
+    <string name="register_emoji">🌿</string>
+    <string name="register_title">创建账户</string>
+    <string name="register_subtitle">开始记录你的习惯</string>
+    <string name="hint_confirm_password">确认密码</string>
+    <string name="btn_register">注 册</string>
+    <string name="btn_back_to_login">已有账户？返回登录</string>
+    <string name="toast_password_mismatch">两次密码不一致</string>
+    <string name="toast_register_success">注册成功</string>
+    <string name="toast_username_exists">用户名已存在</string>
+
+    <!-- Habit List -->
+    <string name="habit_list_title">我的习惯</string>
+    <string name="habit_list_subtitle">今天也要加油哦 🌸</string>
+    <string name="btn_add">＋</string>
+    <string name="empty_emoji">🍃</string>
+    <string name="empty_message">还没有习惯记录</string>
+    <string name="empty_hint">点击右上角 + 开始添加</string>
+    <string name="toast_delete_success">删除成功</string>
+    <string name="confirm_delete_message">确认删除这条习惯记录？</string>
+    <string name="btn_confirm">确认</string>
+    <string name="btn_cancel">取消</string>
+
+    <!-- Habit Item -->
+    <string name="label_date">日期</string>
+    <string name="label_time">时间</string>
+
+    <!-- Add / Edit Habit -->
+    <string name="title_add_habit">添加新习惯</string>
+    <string name="title_edit_habit">编辑习惯</string>
+    <string name="label_habit_name">习惯名称</string>
+    <string name="label_habit_desc">习惯描述</string>
+    <string name="label_add_photo">添加照片</string>
+    <string name="label_change_photo">更换照片</string>
+    <string name="btn_camera">拍照</string>
+    <string name="btn_photo">相册</string>
+    <string name="btn_save_habit">保存习惯</string>
+    <string name="btn_update_habit">保存修改</string>
+    <string name="hint_habit_title">例如：早起、运动、阅读</string>
+    <string name="hint_habit_title_edit">习惯标题</string>
+    <string name="hint_habit_desc_add">记录今天的打卡情况…</string>
+    <string name="hint_habit_desc_edit">习惯描述/打卡备注</string>
+    <string name="toast_enter_habit_title">请输入习惯标题</string>
+    <string name="toast_add_success">习惯添加成功</string>
+    <string name="toast_add_failed">添加失败</string>
+    <string name="toast_update_success">修改成功</string>
+    <string name="toast_update_failed">修改失败</string>
+
+    <!-- Permissions -->
+    <string name="toast_camera_permission">需要相机权限才能拍照</string>
+    <string name="dialog_permission_denied_msg">相机权限已被永久拒绝，请在系统设置中手动开启</string>
+    <string name="btn_go_settings">前往设置</string>
+
+    <!-- Profile & Settings -->
+    <string name="profile_title">我的</string>
+    <string name="profile_days_suffix">已坚持打卡 %d 天</string>
+    <string name="label_dark_mode">深色模式</string>
+    <string name="label_daily_reminder">每日提醒</string>
+    <string name="label_reminder_time">提醒时间</string>
+    <string name="label_export_data">数据导出</string>
+    <string name="label_achievements">成就徽章</string>
+    <string name="label_about">关于</string>
+    <string name="label_logout">退出登录</string>
+    <string name="confirm_logout_msg">确定退出当前账户？</string>
+    <string name="toast_logout_success">已退出登录</string>
+    <string name="toast_export_success">数据已导出</string>
+    <string name="toast_export_failed">导出失败</string>
+    <string name="notify_reminder_title">习惯打卡提醒</string>
+    <string name="notify_reminder_text">别忘了记录今天的习惯哦 🌱</string>
+
+    <!-- Badges -->
+    <string name="badge_bronze_title">坚持一周</string>
+    <string name="badge_bronze_desc">连续打卡 7 天</string>
+    <string name="badge_silver_title">月度达人</string>
+    <string name="badge_silver_desc">连续打卡 30 天</string>
+    <string name="badge_gold_title">百日英雄</string>
+    <string name="badge_gold_desc">连续打卡 100 天</string>
+    <string name="badge_locked">未解锁</string>
+
+    <!-- Search & Filter -->
+    <string name="search_hint">搜索习惯…</string>
+    <string name="filter_all">全部</string>
+    <string name="filter_unfinished">未完成</string>
+    <string name="filter_finished">已完成</string>
+
+    <!-- Calendar Weekdays -->
+    <string name="weekday_mon">一</string>
+    <string name="weekday_tue">二</string>
+    <string name="weekday_wed">三</string>
+    <string name="weekday_thu">四</string>
+    <string name="weekday_fri">五</string>
+    <string name="weekday_sat">六</string>
+    <string name="weekday_sun">日</string>
+
+    <!-- Calendar -->
+    <string name="calendar_month_format">%1$d年%2$d月</string>
+
+    <!-- Profile Stats -->
+    <string name="profile_stats_format">共 %1$d 个习惯 · 打卡 %2$d 次</string>
+
+    <!-- Progress -->
+    <string name="progress_format">✅ %1$d/%2$d 已完成</string>
+    <string name="btn_reset_today">重置今日</string>
+    <string name="confirm_reset_msg">确定要重置今日所有打卡记录吗？</string>
+    <string name="toast_reset_success">已重置今日打卡</string>
+
+    <!-- Swipe Delete -->
+    <string name="swipe_deleted">已删除</string>
+    <string name="swipe_undo">撤销</string>
+    <string name="app_version">v3.0 · iOS Style</string>
+</resources>

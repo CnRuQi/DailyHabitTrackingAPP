@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_bg"
+    android:fillViewport="true"
+    tools:context=".AddHabitActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_add_habit"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/ios_primary_label"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 习惯名称 - MD3 Outlined TextField style -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_ios_card"
+            android:elevation="0dp"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_habit_name"
+                android:textSize="12sp"
+                android:textColor="@color/monet_primary"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/ed_title"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/hint_habit_title"
+                android:textSize="15sp"
+                android:textColor="@color/ios_primary_label"
+                android:textColorHint="@color/ios_secondary_label"
+                android:background="@android:color/transparent"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/monet_primary"
+                android:alpha="0.3"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- 习惯描述 - MD3 Outlined TextField style -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_ios_card"
+            android:elevation="0dp"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_habit_desc"
+                android:textSize="12sp"
+                android:textColor="@color/monet_primary"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/ed_content"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="@string/hint_habit_desc_add"
+                android:gravity="top"
+                android:textSize="15sp"
+                android:textColor="@color/ios_primary_label"
+                android:textColorHint="@color/ios_secondary_label"
+                android:background="@android:color/transparent"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/monet_primary"
+                android:alpha="0.3"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- 上传区域 - 虚线边框卡片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_upload_area"
+            android:padding="24dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/default_avatar"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_add_photo"
+                android:textSize="14sp"
+                android:textColor="@color/monet_primary"
+                android:fontFamily="sans-serif-medium" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/bt_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/btn_camera"
+                    android:textSize="13sp"
+                    android:textColor="@color/monet_primary"
+                    android:background="@drawable/bg_btn_ghost"
+                    android:textAllCaps="false"
+                    android:elevation="0dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:layout_marginEnd="12dp" />
+
+                <Button
+                    android:id="@+id/bt_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/btn_photo"
+                    android:textSize="13sp"
+                    android:textColor="@color/monet_primary"
+                    android:background="@drawable/bg_btn_ghost"
+                    android:textAllCaps="false"
+                    android:elevation="0dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 底部吸底保存按钮 - 全圆角药丸状 -->
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/btn_save_habit"
+            android:textSize="15sp"
+            android:textColor="@color/monet_on_primary"
+            android:background="@drawable/bg_btn_primary"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-medium"
+            android:elevation="0dp"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>

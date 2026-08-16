@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/page_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:baselineAligned="false">
+
+        <!-- 顶部标题栏 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:baselineAligned="false">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/habit_list_title"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/ios_primary_label"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/habit_list_subtitle"
+                    android:textSize="13sp"
+                    android:textColor="@color/ios_secondary_label"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 完成率进度条 -->
+        <LinearLayout
+            android:id="@+id/layout_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="12dp">
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress_indicator"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_weight="1"
+                app:trackColor="@color/ios_fill_tertiary"
+                app:indicatorColor="@color/monet_primary"
+                app:trackCornerRadius="3dp" />
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/progress_format"
+                android:textSize="13sp"
+                android:textColor="@color/ios_secondary_label"
+                android:layout_marginStart="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_reset_today"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="@string/btn_reset_today"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:layout_marginStart="8dp"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/monet_outline_variant"
+                app:strokeWidth="1dp"
+                app:backgroundTint="@android:color/transparent" />
+        </LinearLayout>
+
+        <!-- MD3 Filter Chips -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="8dp">
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggle_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:checkedButton="@+id/btn_all">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_all"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="@string/filter_all"
+                    android:textSize="13sp"
+                    android:textAllCaps="false"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    app:cornerRadius="16dp"
+                    app:strokeColor="@color/monet_outline_variant"
+                    app:strokeWidth="1dp"
+                    app:backgroundTint="@android:color/transparent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_unfinished"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="@string/filter_unfinished"
+                    android:textSize="13sp"
+                    android:textAllCaps="false"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    app:cornerRadius="16dp"
+                    app:strokeColor="@color/monet_outline_variant"
+                    app:strokeWidth="1dp"
+                    app:backgroundTint="@android:color/transparent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_finished"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="@string/filter_finished"
+                    android:textSize="13sp"
+                    android:textAllCaps="false"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    app:cornerRadius="16dp"
+                    app:strokeColor="@color/monet_outline_variant"
+                    app:strokeWidth="1dp"
+                    app:backgroundTint="@android:color/transparent" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </LinearLayout>
+
+        <!-- 搜索栏 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="@string/search_hint"
+                app:queryBackground="@android:color/transparent"
+                app:iconifiedByDefault="false"
+                android:background="@drawable/bg_search_pill"
+                android:elevation="0dp" />
+        </LinearLayout>
+
+        <!-- 月历卡片 (24dp radius) -->
+        <LinearLayout
+            android:id="@+id/layout_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_ios_card"
+            android:elevation="0dp"
+            android:padding="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_calendar_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/ios_primary_label"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:gravity="center" android:textSize="11sp" android:textColor="@color/ios_secondary_label" android:text="@string/weekday_mon"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:gravity="center" android:textSize="11sp" android:textColor="@color/ios_secondary_label" android:text="@string/weekday_tue"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:gravity="center" android:textSize="11sp" android:textColor="@color/ios_secondary_label" android:text="@string/weekday_wed"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:gravity="center" android:textSize="11sp" android:textColor="@color/ios_secondary_label" android:text="@string/weekday_thu"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:gravity="center" android:textSize="11sp" android:textColor="@color/ios_secondary_label" android:text="@string/weekday_fri"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:gravity="center" android:textSize="11sp" android:textColor="@color/ios_secondary_label" android:text="@string/weekday_sat"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:gravity="center" android:textSize="11sp" android:textColor="@color/ios_secondary_label" android:text="@string/weekday_sun"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- 习惯列表 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="4dp"
+            android:clipToPadding="false" />
+
+        <!-- 空状态 -->
+        <LinearLayout
+            android:id="@+id/layout_empty"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_empty_habit"
+                android:alpha="0.5"
+                android:contentDescription="@string/empty_emoji" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/empty_message"
+                android:textSize="15sp"
+                android:textColor="@color/ios_secondary_label"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/empty_hint"
+                android:textSize="13sp"
+                android:textColor="@color/ios_secondary_label"
+                android:alpha="0.7"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

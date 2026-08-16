@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Locked badge -->
+    <path android:fillColor="@color/ios_fill_tertiary"
+        android:pathData="M24,4 A20,20 0 1,0 24,44 A20,20 0 1,0 24,4 Z" />
+    <path android:fillColor="@color/ios_secondary_label"
+        android:pathData="M18,22 L30,22 C31.1,22 32,22.9 32,24 L32,33 C32,34.1 31.1,35 30,35 L18,35 C16.9,35 16,34.1 16,33 L16,24 C16,22.9 16.9,22 18,22 Z" />
+    <path android:fillColor="@color/ios_secondary_label"
+        android:pathData="M20,22 L20,19 C20,16.8 21.8,15 24,15 C26.2,15 28,16.8 28,19 L28,22" />
+</vector>
